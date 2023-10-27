@@ -1,0 +1,13 @@
+name: Hue Action
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Hue Action
+        uses: manekinekko/hue-action@v1.0
+        if: success()
+        with:
+          hueWebhook: ${{ secrets.HUEACTION_WEBHOOK }}
+          hueLightId: "1"
+          hueStatus: "success"
