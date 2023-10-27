@@ -9,5 +9,5 @@ jobs:
         if: success()
         with:
           hueWebhook: ${{ secrets.HUEACTION_WEBHOOK }}
-          hueLightId: "1"
+          hueLightId: "3"
           hueStatus: "success"
